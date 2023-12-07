@@ -3,4 +3,9 @@ class Api::GreetingsController < ApplicationController
     @greeting = Message.order('RANDOM()').first
     render json: { greeting: @greeting&.content }
   end
+  # def random
+  #   @greeting = Message.all.sample
+
+  #   render json: @greeting
+  # end
 end
